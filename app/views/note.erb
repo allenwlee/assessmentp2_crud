@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Note</h1>
+  <li><%= @note.title %></li>
+  <li><%= @note.content %></li>
+</div>
+
+<div class="container">
+  <li><a href='/note/<%=@note.id%>/edit'>Edit</a></li>
+  <li><a href='/note/<%=@note.id%>/delete'>Delete</a></li>
+</div>
