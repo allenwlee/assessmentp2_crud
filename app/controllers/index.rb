@@ -23,7 +23,7 @@ get '/note/:note_id/edit' do
   erb :edit_note
 end
 
-post '/note/:note_id/edit' do
+put '/note/:note_id/edit' do
   Note.find(params[:note_id]).update_attributes(params[:note])
   redirect '/'
 end
@@ -34,7 +34,7 @@ get '/note/:note_id/delete' do
 
 end
 
-get '/note/:note_id/delete/confirm' do
+delete '/note/:note_id/delete/confirm' do
   @note = Note.find(params[:note_id])
   @note.delete
   redirect '/'

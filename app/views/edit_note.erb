@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Edit Note</h1>
   <form method="post" action="/note/<%= @note.id %>/edit">
+    <input type="hidden" name="_method" value="put">
     <textarea name="note[title]"><%=@note.title %></textarea>
     <textarea name="note[content]"><%=@note.content %></textarea>
     <input type="submit" value="update">

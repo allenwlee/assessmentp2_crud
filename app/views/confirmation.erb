@@ -1,5 +1,7 @@
 <div class="container">
   <h1>Confirm delete?</h1>
-  <a href='/note/<%=@note.id%>/delete/confirm'>Yes, delete.</a>
+  <form method="post" action='/note/<%=@note.id%>/delete/confirm'>
+    <input type="hidden" name="_method" value="delete">
+    <input type='submit' value='Yes, delete.'>
   <a href='/note/<%=@note.id%>'>No.  Go back.</a>
 </div>
